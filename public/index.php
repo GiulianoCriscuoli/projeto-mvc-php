@@ -1,3 +1,9 @@
+<?php
+
+include './../app/Libraries/Router.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +12,11 @@
     <title></title>
 </head>
 <body>
+
+    <?php
+        $routes = new Router();
+      
+    ?>
     
 </body>
 </html>
