@@ -10,13 +10,13 @@ class Pages extends Controller {
         $this->view('pages/home', $datas);
     }
 
-    public function sobre() {
+    public function about() {
         $datas = [ 
-            'pageTitle' => 'Sobre',
+            'pageTitle' => 'Sobre o projeto',
             'description' => 'Sobre nossos serviços'
         ];
 
-        $this->view('pages/sobre', $datas);
+        $this->view('pages/about', $datas);
     }
    
 }

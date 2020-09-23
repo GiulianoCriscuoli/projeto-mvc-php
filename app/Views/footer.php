@@ -1,4 +1,4 @@
-<footer class="bg-success p-5 text-light">
+<footer class="bg-primary p-5 text-light">
     <div class="container">
         <small>
             Aprendendo MVC, PHP7 e orientação a objetos
