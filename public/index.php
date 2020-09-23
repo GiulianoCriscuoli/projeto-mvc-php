@@ -17,7 +17,9 @@ include './../app/Libraries/Controller.php';
 <body>
 
     <?php
+        include APP.'/Views/header.php';
         $routes = new Router();
+        include APP.'/Views/footer.php';
     
     ?>
     
