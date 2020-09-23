@@ -1,6 +1,7 @@
 <?php
 
 include './../app/Libraries/Router.php';
+include './../app/Libraries/Controller.php';
 
 ?>
 
@@ -15,6 +16,7 @@ include './../app/Libraries/Router.php';
 
     <?php
         $routes = new Router();
+        
       
     ?>
     
