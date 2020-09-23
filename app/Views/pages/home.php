@@ -1,1 +1,1 @@
-HOMEPAGE
+<h1><?php echo $datas['title']; ?> </h1>
