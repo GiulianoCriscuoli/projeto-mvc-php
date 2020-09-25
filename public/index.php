@@ -4,7 +4,21 @@ include './../app/Libraries/Router.php';
 include './../app/Libraries/Controller.php';
 include './../app/Libraries/Connection.php';
 
-$connection = new Connection;
+$db = new Connection;
+
+$user_id = 10;
+$title = 'Título';
+$text = 'Texto do post';
+
+$db->query("INSERT INTO posts(user_id, title, text) VALUES(:user_id, :title, :text)");
+$db->bind(":user_id", $user_id);
+$db->bind(":title", $title);
+$db->bind(":text", $text);
+
+$db->execute();
+
+echo '<p> O máximo de linhas encontradas: '.$db->maxRow().'</p>';
+echo '<p> O último id inserido: '.$db->lastId().'</p>';
 
 ?>
 
