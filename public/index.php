@@ -6,11 +6,10 @@ include './../app/Libraries/Connection.php';
 
 $db = new Connection;
 
-$user_id = 10;
-$title = 'Título';
-$text = 'Texto do post';
 
-$db->query("INSERT INTO posts(user_id, title, text) VALUES(:user_id, :title, :text)");
+// TESTANDO o funcionamento das querys
+
+/* $db->query("INSERT INTO posts(user_id, title, text) VALUES(:user_id, :title, :text)");
 $db->bind(":user_id", $user_id);
 $db->bind(":title", $title);
 $db->bind(":text", $text);
@@ -18,7 +17,28 @@ $db->bind(":text", $text);
 $db->execute();
 
 echo '<p> O máximo de linhas encontradas: '.$db->maxRow().'</p>';
-echo '<p> O último id inserido: '.$db->lastId().'</p>';
+echo '<p> O último id inserido: '.$db->lastId().'</p>'; */
+
+/* $db->query("SELECT * FROM posts");
+$db->result();
+$db->execute();
+
+ echo $db->result()->title;
+
+ echo '<br /> Resultados encontrados: '.$db->maxRow();
+
+*/
+
+/* $db->query("SELECT * FROM posts ORDER BY id ASC");
+$db->execute();
+
+foreach($db->resultsAll() as $post) {
+    echo $post->id.'-'.$post->title.'<br />';
+}
+
+echo '<br />Resultados encontrados: '.$db->maxRow();
+
+*/
 
 ?>
 

@@ -67,7 +67,7 @@ class Connection {
         }
 
         public function resultsAll() {
-            return $this->stmt->fecthAll(PDO::FETCH_OBJ);
+            return $this->stmt->fetchAll(PDO::FETCH_OBJ);
         }
 
         public function maxRow() {
