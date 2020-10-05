@@ -47,7 +47,6 @@ class Router {
         //call_user_func_array chama uma função de usuário com um array de parâmetros
         call_user_func_array([$this->controller, $this->method], $this->params);
 
-
     }
 
     private function url() {

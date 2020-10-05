@@ -1,10 +1,9 @@
 <?php
 include './../app/conf.php';
-include './../app/Libraries/Router.php';
-include './../app/Libraries/Controller.php';
-include './../app/Libraries/Connection.php';
+include './../app/autoload.php';
 
-$db = new Connection;
+
+//$db = new Connection;
 
 
 // TESTANDO o funcionamento das querys
