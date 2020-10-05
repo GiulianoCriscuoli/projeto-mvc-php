@@ -10,11 +10,11 @@
         <a class="nav-link" href="<?php echo URL; ?>">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo URL; ?>/pages/about">Sobre o projeto</a>
+        <a class="nav-link" href="<?php echo URL; ?>pages/about">Sobre o projeto</a>
       </li>
     </ul>
     <span class="navbar-text">
-        <button class="btn btn-light">Cadastre-se</button>
+      <a class="btn btn-success" href="<?php echo URL; ?>users/signup" data-tooltip="data-tooltip" title="Não tem conta? Cadastre-se">Cadastre-se</a>
         <button class="btn btn-light">Entrar</button>
     </span>
   </div>
