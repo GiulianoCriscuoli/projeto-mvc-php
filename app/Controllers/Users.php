@@ -19,14 +19,14 @@ class Users extends Controller {
                 $datas['error_name'] = 'Campo vazio. Preencha o nome corretamente!';
             } elseif(strlen($datas['name']) < 3) {
                 $datas['error_name'] = 'O campo nome tem que ter no mínimo 3 caracteres';
-            } elseif(is_numeric($datas['name'])) {
-                $datas['error_name'] = 'Não é permitido números neste campo. Preencha novamente!';
+            } elseif(Check::checkName($datas['name'])) {
+                $datas['error_name'] = 'O campo nome não pode ter números ou caracteres. Preencha novamente!';
             }
             
             if(empty($datas['email'])) {
                 $datas['error_email'] = 'Campo vazio. Preencha o email corretamente!';
-            } elseif(is_numeric($datas['email'])) {
-                $datas['error_email'] = 'Não é permitido números neste campo. Preencha novamente!';
+            } elseif(Check::checkEmail($datas['email'])) {
+                $datas['error_email'] = 'O campo email não pode ter números ou caracteres. Preencha novamente!';
             }
 
             if(empty($datas['password'])) {
@@ -42,6 +42,12 @@ class Users extends Controller {
             } elseif($datas['password'] !== $datas['confirm']) {
                 $datas['error_confirm'] = 'As senhas são diferentes!';
             }
+
+            else {
+                $datas['password'] = password_hash($datas['password'], PASSWORD_DEFAULT);
+                echo'Cadastro realizado';
+            }
+
 
         } else {
             $datas = [
