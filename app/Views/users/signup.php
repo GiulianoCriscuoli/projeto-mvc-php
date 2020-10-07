@@ -7,24 +7,44 @@
                 <div class="form-group">
                     <label for="name">Nome: <sup class="text-danger">*</sup></label>
                     <input type="text" 
-                    class="form-control" 
+                    class="form-control  <?php echo $datas['error_name'] ? 'is-invalid' : ''; ?>" 
                     id="name" autocomplete="off"
-                     required />
+                    name="name" 
+                    value="<?php echo $datas['name']; ?>"/>
+                    <div class="invalid-feedback">
+                        <?php echo $datas['error_name']; ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="email">Email: <sup class="text-danger">*</sup></label>
                     <input type="email" 
-                    class="form-control" 
+                    class="form-control <?php echo $datas['error_email'] ? 'is-invalid' : ''; ?>" 
                     id="email" autocomplete="off"
-                     required />
+                    name="email"
+                    value="<?php echo $datas['email']; ?>" />
+                    <div class="invalid-feedback">
+                        <?php echo $datas['error_email']; ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Senha: <sup class="text-danger">*</sup></label>
-                    <input type="password" class="form-control" id="password" required />
+                    <input type="password" 
+                    name="password" 
+                    class="form-control <?php echo $datas['error_password'] ? 'is-invalid' : ''; ?>" 
+                    id="password" />
+                    <div class="invalid-feedback">
+                        <?php echo $datas['error_password']; ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="confirm">Confirmar senha: <sup class="text-danger">*</sup></label>
-                    <input type="password" class="form-control" id="confirm" required />
+                    <input type="password"
+                     name="confirm" 
+                     class="form-control <?php echo $datas['error_confirm'] ? 'is-invalid' : ''; ?>" 
+                     id="confirm" />
+                     <div class="invalid-feedback">
+                         <?php echo $datas['error_confirm']; ?>
+                     </div>
                 </div>
                 <div class="row">
                     <div class="col">

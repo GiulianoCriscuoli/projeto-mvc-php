@@ -48,7 +48,7 @@ echo '<br />Resultados encontrados: '.$db->maxRow();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo APP_NAME; ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href= "<?php echo URL ?>/public/css/style.css"/>
+    <link rel="stylesheet" href= "<?php echo URL ?>public/css/style.css"/>
 </head>
 <body>
 
@@ -62,6 +62,6 @@ echo '<br />Resultados encontrados: '.$db->maxRow();
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="<?php URL; ?>/public/js/jquery.functions.js"> </script>
+    <script src="<?php URL; ?>public/js/jquery.functions.js"> </script>
 </body>
 </html>
